@@ -20,7 +20,7 @@ Desarrollar una aplicación en JavaScript que permita:
 ├── script.js
 └── README.md
 
- **Tecnologpias utilizadas**  
+ **Tecnologias utilizadas**  
 - JavaScript
 - HTML5
 - CSS 
