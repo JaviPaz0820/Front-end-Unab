@@ -16,8 +16,10 @@ Desarrollar una aplicación en JavaScript que permita:
 
  **Estructura del proyecto**  
 ├── index.html
-├── style.css
-├── script.js
+├── css
+ └──  style.css
+├── js
+ └──  script.js
 └── README.md
 
  **Tecnologias utilizadas**  
