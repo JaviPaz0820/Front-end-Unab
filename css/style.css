@@ -1,0 +1,74 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+.sala {
+  margin-bottom: 30px;
+}
+
+.asientos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.asientos div {
+  width: 40px;
+  height: 40px;
+  background-color: #8bc34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.asientos .reservado {
+  background-color: #e53935;
+  color: white;
+}
+
+.acciones {
+  margin-top: 20px;
+}
+
+input[type="number"] {
+  padding: 8px;
+  margin-right: 10px;
+  width: 150px;
+}
+
+button {
+  padding: 8px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #1976d2;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ddd;
+}

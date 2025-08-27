@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas Cine Koy</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Cine Koy</h1>
+    <p>Gestión de reservas de asientos</p>
+  </header>
+
+  <main>
+    <section class="sala">
+      <h2>Sala 1</h2>
+      <div class="asientos" id="sala1">
+        <!-- Aquí se mostrarán los asientos dinámicamente -->
+      </div>
+    </section>
+
+    <section class="acciones">
+      <h3>Reservar o Cancelar Asiento</h3>
+      <input type="number" id="numeroAsiento" placeholder="Número de asiento">
+      <button onclick="reservar()">Reservar</button>
+      <button onclick="cancelar()">Cancelar</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cine Koy</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
