@@ -50,3 +50,7 @@ npm run build
 
 4. Abre src/index.html en tu navegador.
 
+Autora
+Javiera Ampuero Millaquipai
+
+
