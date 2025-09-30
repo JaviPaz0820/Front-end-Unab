@@ -1,73 +1,70 @@
-// Función constructora Paciente
-function Paciente(nombre, edad, rut, diagnostico) {
-  var _nombre = nombre;
-  var _edad = edad;
-  var _rut = rut;
-  var _diagnostico = diagnostico;
-
-  this.getNombre = function() { return _nombre; };
-  this.getEdad = function() { return _edad; };
-  this.getRut = function() { return _rut; };
-  this.getDiagnostico = function() { return _diagnostico; };
-
-  this.setNombre = function(nuevoNombre) { _nombre = nuevoNombre; };
-  this.setEdad = function(nuevaEdad) { _edad = nuevaEdad; };
-  this.setRut = function(nuevoRut) { _rut = nuevoRut; };
-  this.setDiagnostico = function(nuevoDiagnostico) { _diagnostico = nuevoDiagnostico; };
-}
-
-// Función constructora Consultorio
-function Consultorio(nombre) {
-  this.nombre = nombre;
-  this.pacientes = [];
-}
-
-// Método para mostrar todos los pacientes
-Consultorio.prototype.mostrarPacientes = function() {
-  var texto = "Lista de pacientes:\n";
-  for (var i = 0; i < this.pacientes.length; i++) {
-    var p = this.pacientes[i];
-    texto += "Nombre: " + p.getNombre() + "\n";
-    texto += "Edad: " + p.getEdad() + "\n";
-    texto += "RUT: " + p.getRut() + "\n";
-    texto += "Diagnóstico: " + p.getDiagnostico() + "\n";
-    texto += "---------------------------\n";
-  }
-  return texto;
-};
-
-// Método para buscar paciente por nombre
-Consultorio.prototype.buscarPorNombre = function(nombreBuscado) {
-  for (var i = 0; i < this.pacientes.length; i++) {
-    var p = this.pacientes[i];
-    if (p.getNombre().toLowerCase() === nombreBuscado.toLowerCase()) {
-      var texto = "Paciente encontrado:\n";
-      texto += "Nombre: " + p.getNombre() + "\n";
-      texto += "Edad: " + p.getEdad() + "\n";
-      texto += "RUT: " + p.getRut() + "\n";
-      texto += "Diagnóstico: " + p.getDiagnostico() + "\n";
-      return texto;
+$(document).ready(function() {
+    const API_URL = "https://api.boostr.cl/feriados/en.json";
+    const tbody = $("#feriados-table");
+    
+    // Mostrar mensaje de carga
+    tbody.html('<tr><td colspan="3" class="text-center">Cargando feriados...</td></tr>');
+    
+    // Función para cargar feriados
+    async function cargarFeriados() {
+        try {
+            const response = await fetch(API_URL);
+            
+            if (!response.ok) {
+                throw new Error(`Error HTTP: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            
+            // Limpiar la tabla
+            tbody.empty();
+            let feriados = [];
+            
+            if (Array.isArray(data)) {
+                feriados = data;
+            } else if (data && data.data && Array.isArray(data.data)) {
+                feriados = data.data;
+            } else if (data && data.holidays && Array.isArray(data.holidays)) {
+                feriados = data.holidays;
+            } else {
+                console.log('Estructura de datos recibida:', data);
+                tbody.html('<tr><td colspan="3" class="text-center text-warning">Formato de datos no reconocido</td></tr>');
+                return;
+            }
+            
+            // Verificar si hay datos
+            if (!feriados || feriados.length === 0) {
+                tbody.html('<tr><td colspan="3" class="text-center text-warning">No se encontraron feriados</td></tr>');
+                return;
+            }
+            
+            // Agregar cada feriado a la tabla
+            feriados.forEach(feriado => {
+                const fecha = feriado.date || feriado.fecha || '';
+                const nombre = feriado.title || feriado.nombre || feriado.name || '';
+                const tipo = feriado.type || feriado.tipo || 'General';
+                
+                const fila = `
+                    <tr>
+                        <td>${fecha}</td>
+                        <td>${nombre}</td>
+                        <td><span class="badge bg-info">${tipo}</span></td>
+                    </tr>
+                `;
+                tbody.append(fila);
+            });
+            
+        } catch (error) {
+            console.error('Error al cargar los feriados:', error);
+            tbody.html(`
+                <tr>
+                    <td colspan="3" class="text-center text-danger">
+                        ⚠️ Error al cargar los feriados: ${error.message}
+                        <br><small>Revisa la consola para más detalles</small>
+                    </td>
+                </tr>
+            `);
+        }
     }
-  }
-  return "No se encontró ningún paciente con ese nombre.";
-};
-
-// Instanciación de pacientes y consultorio
-var paciente1 = new Paciente("Ana Torres", 34, "12.345.678-9", "Hipertensión");
-var paciente2 = new Paciente("Luis Pérez", 45, "98.765.432-1", "Diabetes");
-var paciente3 = new Paciente("María López", 29, "11.223.344-5", "Alergia");
-
-var consultorioCentral = new Consultorio("Consultorio Central");
-consultorioCentral.pacientes.push(paciente1, paciente2, paciente3);
-
-// Funciones para la interfaz
-function mostrarTodos() {
-  var resultado = consultorioCentral.mostrarPacientes();
-  document.getElementById("resultado").textContent = resultado;
-}
-
-function buscarPaciente() {
-  var nombre = document.getElementById("nombreBusqueda").value;
-  var resultado = consultorioCentral.buscarPorNombre(nombre);
-  document.getElementById("resultado").textContent = resultado;
-}
+    cargarFeriados();
+});
