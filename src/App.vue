@@ -53,9 +53,44 @@ export default {
 }
 </script>
 
-<style>
+<style> 
 body {
-  background-color: #f8f9fa;
+  background-color: #f4f6f8;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.table {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1rem;
+}
+
+.table-dark th {
+  background-color: #0d6efd !important;
+  color: white !important;
+}
+
+tr:nth-child(even) {
+  background-color: #f9fbfd;
+}
+
+tr:hover {
+  background-color: #e9f3ff;
+  transition: background-color 0.3s ease;
 }
 </style>
 
