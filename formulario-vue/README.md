@@ -1,5 +1,54 @@
-# Vue 3 + Vite
+# Formulario Interactivo con Vue 3
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Implementación de controles de tipo **radio** y **select** para capturar y mostrar información del usuario de manera dinámica.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+---
+
+## Objetivo del proyecto
+
+El objetivo de este ejercicio es **implementar un formulario interactivo** utilizando **Vue 3 y su sistema de binding bidireccional (`v-model`)**, cumpliendo los siguientes requerimientos:
+
+- Utilizar un conjunto de controles **radio** para permitir seleccionar el tipo de estudios.
+- Mostrar en pantalla el valor actualmente seleccionado.
+- Implementar un control **select** con los días de la semana.
+- Mostrar en pantalla el día seleccionado.
+- Iniciar los valores del modelo desde el código (no mediante atributos HTML como `checked`).
+- Aplicar buenas prácticas de estructura y estilos en componentes Vue.
+
+---
+
+## Instalación y ejecución
+
+Sigue estos pasos en tu terminal 
+
+```bash
+# 1. Clonar el repositorio o crear la carpeta del proyecto
+git clone <URL_DEL_REPOSITORIO> formulario-vue
+cd formulario-vue
+
+# 2. Instalar dependencias
+npm install
+
+# 3. Ejecutar el servidor de desarrollo
+npm run dev
+
+Luego abre tu navegador en la dirección que indica la terminal, normalmente:
+http://localhost:5173
+
+## Instalación y ejecución
+
+formulario-vue/
+├─ public/
+│  └─ favicon.ico
+├─ src/
+│  ├─ components/
+│  │  ├─ EstudiosForm.vue    
+│  │  └─ DiasSelect.vue     
+│  ├─ App.vue                 
+│  └─ main.js                 
+├─ index.html
+├─ package.json
+└─ vite.config.js
+
+## Autor
+Javiera Ampuero Millaquipai
