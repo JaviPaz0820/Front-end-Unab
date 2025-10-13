@@ -35,6 +35,8 @@ npm run dev
 Luego abre tu navegador en la dirección que indica la terminal, normalmente:
 http://localhost:5173
 
+---
+
 ## Instalación y ejecución
 
 formulario-vue/
