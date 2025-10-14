@@ -1,0 +1,12 @@
+[
+  {
+    "pokemones": [
+      { "id": "1", "nombre": "pikachu" },
+      { "id": "2", "nombre": "kakuna" },
+      { "id": "3", "nombre": "beedrill" },
+      { "id": "4", "nombre": "metapod" },
+      { "id": "5", "nombre": "rattata" }
+    ]
+  }
+]
+
