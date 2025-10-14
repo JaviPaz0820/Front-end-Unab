@@ -1,38 +1,59 @@
-# pokemon-search
+#  Buscador de Pokemones con Vue.js
 
-This template should help get you started developing with Vue 3 in Vite.
+Este proyecto consiste en una aplicación web desarrollada con **Vue 3** (usando **Vite**) que permite **buscar pokemones** por su nombre dentro de una lista predefinida.  
+El objetivo es demostrar el **manejo de eventos**, **vinculación de datos (data binding)** y **filtrado reactivo** en una interfaz sencilla utilizando **Bootstrap 5** para el diseño visual.
 
-## Recommended IDE Setup
+---
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+##  Características principales
 
-## Recommended Browser Setup
+- Implementado con **Vue 3 + Vite**
+- Interfaz responsiva usando **Bootstrap 5**
+- Búsqueda en tiempo real mediante **eventos de entrada (`@input`)**
+- Validación básica del formulario
+- Mensaje dinámico cuando el Pokémon buscado **no existe**
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+---
 
-## Customize configuration
+## Estructura del proyecto
+pokemon-search/
+├── public/
+├── src/
+│ ├── assets/
+│ ├── components/
+│ │ └── PokemonList.vue
+│ ├── data/
+│ │ └── pokemons.json
+│ ├── styles/
+│ │ └── main.css
+│ ├── App.vue
+│ └── main.js
+├── package.json
+├── vite.config.js
+└── README.md
 
-See [Vite Configuration Reference](https://vite.dev/config/).
 
-## Project Setup
+---
 
-```sh
+## Instalación y configuración
+
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/tu-usuario/pokemon-search.git
+cd pokemon-search
+
+### 2. Instalar dependencias
+
 npm install
-```
 
-### Compile and Hot-Reload for Development
+### 3. Ejecutar el servidor
 
-```sh
 npm run dev
-```
+El servidor se iniciará normalmente en http://localhost:5173
 
-### Compile and Minify for Production
+---
 
-```sh
-npm run build
-```
+# Autor
+
+Javiera Ampuero Millaquipai
+
