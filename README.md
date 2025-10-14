@@ -38,17 +38,21 @@ pokemon-search/
 # **Instalación y configuración**
 
 **1. Clonar el repositorio**
+
 ```bash
 git clone https://github.com/tu-usuario/pokemon-search.git
 cd pokemon-search
+
 
 2. Instalar dependencias
 
 npm install
 
+
 3. Ejecutar el servidor
 
 npm run dev
+
 El servidor se iniciará normalmente en http://localhost:5173
 
 ---
