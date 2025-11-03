@@ -18,9 +18,9 @@ Este proyecto es parte del módulo 7 del curso de Desarrollo Front-End de la Uni
 
 1. Clona este repositorio (opcional si ya lo tienes local):
    ```bash
-   git clone https://github.com/JaviPaz0820/Front-end-Unab.git
-   cd Front-end-Unab
-   git checkout M7-AE2_ABP2
+  -  git clone https://github.com/JaviPaz0820/Front-end-Unab.git
+  -  cd Front-end-Unab
+  -  git checkout M7-AE2_ABP2
 
 2. Instala las dependencias:
    npm install
@@ -30,20 +30,20 @@ Este proyecto es parte del módulo 7 del curso de Desarrollo Front-End de la Uni
 
 ## Credenciales de prueba (Firebase)
 Puedes iniciar sesión con el siguiente usuario de prueba:
-Correo: test@pokeguia.com
-Contraseña: 123456
-Estas credenciales están configuradas en Firebase Authentication y permiten acceder a las funcionalidades protegidas de la app.
+- Correo: test@pokeguia.com
+- Contraseña: 123456
+- Estas credenciales están configuradas en Firebase Authentication y permiten acceder a las funcionalidades protegidas de la app.
 
 ## Estructura del proyecto
 
 ├── public/  
 ├── src/
-│   ├── assets/ 
-│   ├── components/  
-│   ├── views/  
-│   ├── router/ 
-│   ├── firebase/ 
-│   └── App.vue  
+ │   ├── assets/ 
+ │   ├── components/  
+ │   ├── views/  
+ │   ├── router/ 
+ │   ├── firebase/ 
+ │   └── App.vue  
 ├── .gitignore
 ├── index.html
 ├── package.json
