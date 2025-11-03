@@ -1,38 +1,50 @@
-# personajes-app
+# Módulo 7 - ABP1 
 
-This template should help get you started developing with Vue 3 in Vite.
+Este proyecto corresponde a la entrega del **Aprendizaje Basado en Proyectos (ABP1)** del **Módulo 7** del curso de **Desarrollo de Aplicaciones Front-End** de la Universidad Andrés Bello (UNAB). El objetivo principal es aplicar los conocimientos adquiridos en el desarrollo de una aplicación web moderna utilizando **Vue 3** y **Vite** como entorno de desarrollo.
 
-## Recommended IDE Setup
+---
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Tecnologías Utilizadas
 
-## Recommended Browser Setup
+- **Vue 3**: Framework progresivo para construir interfaces de usuario.
+- **Vite**: Herramienta de desarrollo rápida y ligera para proyectos front-end.
+- **JavaScript (ES6+)**
+- **HTML5 & CSS3**
+- **Node.js & npm**
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+---
 
-## Customize configuration
+## 📁 Estructura del Proyecto
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+├── public/
+├── src/
+│ ├── assets/
+│ ├── components/
+│ ├── views/
+│ └── App.vue
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
 
-## Project Setup
 
-```sh
-npm install
-```
+---
 
-### Compile and Hot-Reload for Development
+## Instalación y Ejecución
 
-```sh
-npm run dev
-```
+1. Clona este repositorio (o descarga los archivos).
+2. Instala las dependencias:
+   ```bash
+   npm install
+3. Ejecuta el servidor de desarrollo:
+   npm run dev
+4. Abre tu navegador en http://localhost:5173
 
-### Compile and Minify for Production
+---
 
-```sh
-npm run build
-```
+## Autor
+
+Javiera Ampuero Millaquipai
+
+
+
