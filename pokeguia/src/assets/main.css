@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #ffcb05, #fff);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+h1, h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: #2a75bb;
+}
+
+button {
+  cursor: pointer;
+  background: #ff0000;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #cc0000;
+}
