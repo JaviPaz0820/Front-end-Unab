@@ -22,6 +22,8 @@ Aplicación web tipo SPA desarrollada con **Vue 3**, orientada a la gestión de 
 - Node.js ≥ 16.x
 - npm ≥ 8.x
 
+--- 
+
 ### Pasos para ejecutar el proyecto
 
 ```powershell
@@ -38,7 +40,10 @@ npm run dev
 #Compilación para producción
 npm run build
 
-# Estructura del proyecto 
+--- 
+
+**Estructura del proyecto**
+
 src/
 ├── views/               # Vistas principales
 │   ├── Home.vue         # Página de inicio
@@ -52,6 +57,8 @@ src/
 ├── main.js              # Punto de entrada
 └── style.css            # Estilos globales
 
+---
+
 # Funcionalidades Principales
 
 - Gestión de productos 
@@ -64,14 +71,20 @@ src/
    - Editar producto (mediante prompt) 
    - Eliminar producto (con confirmación)
 
+---
+
 # Autenticación Demo (/login)
 - Formulario básico sin conexión a backend
 - Estado de sesión gestionado con Vuex
 - Redirección automática tras login
 
-# Navegación
+--- 
+
+## Navegación
 - Rutas disponibles: / (Inicio), /products (Productos), /login
 - Menú superior con estado de sesión visible
+
+---
 
 # Modelo de datos
 {
@@ -83,11 +96,15 @@ src/
   destacado: true           // Indicador de producto destacado
 }
 
+---
+
 # Estado Global (Vuex)
 - state.products – Lista de productos
 - state.user – Usuario autenticado (o null)
 - getters – totalProductsCount, totalStock
 - mutations/actions – Operaciones CRUD y login/logout
+
+---
 
 # Guía de uso
 - Inicio de sesión → Ingresar correo en /login → Click en "Entrar"
@@ -96,6 +113,8 @@ src/
 - Agregar producto → Completar formulario y hacer clic en "Añadir"
 - Editar producto → Clic en "Editar" → Modificar nombre
 - Eliminar producto → Clic en "Borrar" → Confirmar acción
+
+---
 
 # Solución de problemas comunes 
 - Error: "Failed to resolve import 'vuex'"
