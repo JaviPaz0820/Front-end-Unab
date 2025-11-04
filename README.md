@@ -24,21 +24,22 @@ Aplicación web tipo SPA desarrollada con **Vue 3**, orientada a la gestión de 
 
 --- 
 
-### Pasos para ejecutar el proyecto
+## Pasos para ejecutar el proyecto
 
-# Instalar dependencias
+### Instalar dependencias
 npm install
 
-# Ejecutar servidor de desarrollo
+### Ejecutar servidor de desarrollo
 npm run dev
-# Acceder a http://localhost:5173 desde el navegador
 
-#Compilación para producción
+Acceder a http://localhost:5173 desde el navegador
+
+### Compilación para producción
 npm run build
 
 --- 
 
-**Estructura del proyecto**
+## Estructura del proyecto
 
 src/
 ├── views/               # Vistas principales
@@ -55,7 +56,7 @@ src/
 
 ---
 
-# Funcionalidades Principales
+## Funcionalidades Principales
 
 - Gestión de productos 
  - Visualización de productos con código, nombre, stock y precio
@@ -69,7 +70,7 @@ src/
 
 ---
 
-# Autenticación Demo (/login)
+## Autenticación Demo (/login)
 - Formulario básico sin conexión a backend
 - Estado de sesión gestionado con Vuex
 - Redirección automática tras login
@@ -82,7 +83,7 @@ src/
 
 ---
 
-# Modelo de datos
+## Modelo de datos
 {
   codigo: "0001",           // Identificador único
   nombre: "Audífonos",      // Nombre del producto
@@ -94,7 +95,7 @@ src/
 
 ---
 
-# Estado Global (Vuex)
+## Estado Global (Vuex)
 - state.products – Lista de productos
 - state.user – Usuario autenticado (o null)
 - getters – totalProductsCount, totalStock
@@ -102,7 +103,7 @@ src/
 
 ---
 
-# Guía de uso
+## Guía de uso
 - Inicio de sesión → Ingresar correo en /login → Click en "Entrar"
 - Visualizar productos → Acceder a /products para ver listado y métricas
 - Buscar producto → Escribir en el campo de búsqueda
@@ -112,12 +113,12 @@ src/
 
 ---
 
-# Solución de problemas comunes 
+## Solución de problemas comunes 
 - Error: "Failed to resolve import 'vuex'"
 npm install
 
 - Puerto 5173 en uso
 npm run dev -- --port 3000
 
-## Autor
+### Autor
 Javiera Ampuero Millaquipai
