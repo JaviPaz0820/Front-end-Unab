@@ -26,10 +26,6 @@ Aplicación web tipo SPA desarrollada con **Vue 3**, orientada a la gestión de 
 
 ### Pasos para ejecutar el proyecto
 
-```powershell
-# Acceder al directorio del proyecto
-cd "c:\Users\fabia\Documents\_Front_end_Trainee\Modulo 7\AE3\M7AE3-ABP3\M7AE3-ABP3"
-
 # Instalar dependencias
 npm install
 
