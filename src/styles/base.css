@@ -1,0 +1,76 @@
+:root{
+  --bg:#0b0f12;
+  --card:#0f1418;
+  --muted:#9aa3ad;
+  --accent:#6ee7b7;
+  --accent2:#7c5cff;
+  --glass:rgba(255,255,255,0.03);
+  --radius:12px;
+  --maxw:1200px;
+  --font:Inter, system-ui;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:var(--font);
+  background:var(--bg);
+  color:#e6eef2;
+  padding:0 16px;
+}
+
+.container{
+  max-width:var(--maxw);
+  margin:auto;
+  padding:32px 0;
+}
+
+.row{
+  display:flex;
+  gap:16px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:20px;
+  box-shadow:0 6px 18px rgba(0,0,0,.6);
+}
+
+.btn{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:600;
+  border:none;
+  color:#061016;
+  cursor:pointer;
+}
+
+.link-muted{
+  color:var(--muted);
+  text-decoration:none;
+}
+
+.muted{
+  color:var(--muted);
+}
+
+.hero-grid{
+  display:grid;
+  gap:32px;
+}
+
+@media(min-width:900px){
+  .hero-grid{
+    grid-template-columns:1fr 300px; /* Hero | SideGraphics */
+    align-items:center;
+  }
+}
+
+@media(max-width:900px){
+  .hero-grid{
+    grid-template-columns:1fr; /* stack */
+  }
+}
