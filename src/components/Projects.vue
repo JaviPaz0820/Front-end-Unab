@@ -1,42 +1,3 @@
-<template>
-  <section class="projects-wrapper">
-    <h2>Proyectos</h2>
-
-    <div class="carousel-container">
-      <div class="carousel" ref="carousel">
-        <ProjectCard 
-          v-for="p in items" 
-          :key="p.id" 
-          :project="p" 
-        />
-      </div>
-    </div>
-
-    <!-- Botones flecha -->
-    <div class="controls">
-      <button class="ctrl-btn" @click="scrollLeft">‹</button>
-      <button class="ctrl-btn" @click="scrollRight">›</button>
-    </div>
-  </section>
-</template>
-
-<script setup>
-import { ref } from 'vue'
-import ProjectCard from './ProjectCard.vue'
-
-defineProps({ items:Array })
-
-const carousel = ref(null)
-
-function scrollLeft(){
-  carousel.value.scrollBy({ left: -350, behavior:'smooth' })
-}
-
-function scrollRight(){
-  carousel.value.scrollBy({ left: 350, behavior:'smooth' })
-}
-</script>
-
 <style scoped>
 .projects-wrapper{
   display:flex;
@@ -55,14 +16,10 @@ function scrollRight(){
   overflow-x:auto;
   scroll-behavior:smooth;
   padding:10px 5px;
-  scrollbar-width:none; /* Firefox */
+  scrollbar-width:none;
 }
+.carousel::-webkit-scrollbar{ display:none; }
 
-.carousel::-webkit-scrollbar{
-  display:none; /* Chrome */
-}
-
-/* Botones del carrusel */
 .controls{
   display:flex;
   justify-content:center;
@@ -81,9 +38,26 @@ function scrollRight(){
   cursor:pointer;
   transition:.3s;
 }
-
 .ctrl-btn:hover{
   background:var(--accent);
   color:black;
 }
+
+/* ----------------------- */
+/* FIX MOBILE SCROLL-SNAP  */
+/* ----------------------- */
+
+@media(max-width: 750px){
+
+  .carousel{
+    padding:0 !important;
+    scroll-snap-type:x mandatory;
+  }
+
+  /* opcional pero recomendado */
+  .controls{
+    display:none;
+  }
+}
 </style>
+
