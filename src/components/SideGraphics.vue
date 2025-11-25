@@ -6,7 +6,6 @@
       <img src="/src/assets/foto.jpeg" alt="Foto de Javiera Ampuero" class="profile-pic">
     </div>
 
-    <!-- Puedes agregar elementos decorativos si quieres -->
     <div class="accent-bar"></div>
 
   </aside>
@@ -18,7 +17,6 @@
 <style scoped>
 .side-graphics{
   width:100%;
-  height:100%;
   background:var(--glass);
   border-radius:14px;
   display:flex;
@@ -30,10 +28,11 @@
   box-shadow:0 0 25px rgba(0,0,0,.25);
 }
 
-/* Contenedor visual */
+/* Contenedor de imagen */
 .image-box{
   width:100%;
-  height:260px;
+  max-width:320px;
+  height:320px;
   border-radius:12px;
   overflow:hidden;
   border:3px solid var(--accent);
@@ -42,14 +41,12 @@
   align-items:center;
 }
 
-/* Foto cuadrada dentro del recuadro */
 .profile-pic{
   width:100%;
   height:100%;
   object-fit:cover;
 }
 
-/* Barra decorativa opcional */
 .accent-bar{
   width:60%;
   height:6px;
@@ -58,9 +55,16 @@
   opacity:.8;
 }
 
+/* MOBILE: ajusta tamaño y mantiene visibilidad */
 @media(max-width:800px){
   .side-graphics{
-    display:none; /* se oculta en pantallas pequeñas */
+    width:100%;
+    padding:16px;
+  }
+
+  .image-box{
+    height:220px;
+    max-width:100%;
   }
 }
 </style>
