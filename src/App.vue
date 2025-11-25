@@ -60,7 +60,7 @@ const projects = [
   },
   {
     id: 3,
-    image: new URL('/src/assets/Recetas.webp', import.meta.url).href,
+    image: new URL('/src/assets/recetas.webp', import.meta.url).href,
     title: 'Web de Recetas',
     desc: 'La plataforma permite explorar recetas sin recargar la página, gracias al uso de Vue Router y rutas dinámicas.',
     tech: ['Vue 3', 'JavaScript', 'Vite', 'CSS'],
