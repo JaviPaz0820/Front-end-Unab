@@ -1,3 +1,43 @@
+<template>
+  <section class="projects-wrapper">
+    <h2>Proyectos</h2>
+
+    <div class="carousel-container">
+      <div class="carousel" ref="carousel">
+        <ProjectCard
+          v-for="p in items"
+          :key="p.id"
+          :project="p"
+        />
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="ctrl-btn" @click="scrollLeft">‹</button>
+      <button class="ctrl-btn" @click="scrollRight">›</button>
+    </div>
+  </section>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import ProjectCard from './ProjectCard.vue'
+
+defineProps({
+  items: Array
+})
+
+const carousel = ref(null)
+
+function scrollLeft() {
+  carousel.value.scrollBy({ left: -350, behavior: 'smooth' })
+}
+
+function scrollRight() {
+  carousel.value.scrollBy({ left: 350, behavior: 'smooth' })
+}
+</script>
+
 <style scoped>
 .projects-wrapper {
   display: flex;
@@ -53,7 +93,6 @@
     padding: 0 !important;
     scroll-snap-type: x mandatory;
   }
-
   .controls {
     display: none;
   }
