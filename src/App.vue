@@ -5,9 +5,8 @@
     <!-- HERO + SIDEGRAPHICS -->
     <section class="container" id="inicio">
       <div class="hero-grid">
-        <HeroSection />
-
-        <!-- Se mantiene visible en todas las resoluciones -->
+        <!-- ORDEN CONTROLADO CON CSS -->
+        <HeroSection class="hero-section" />
         <SideGraphics class="sidegraphics" />
       </div>
     </section>
@@ -77,35 +76,46 @@ const projects = [
 ]
 </script>
 
-
-
 <style>
 /* ---- HERO + SIDEGRAPHICS GRID ---- */
-
 .hero-grid {
   display: grid;
   gap: 32px;
 }
 
-/* Desktop: dos columnas */
+/* Desktop → dos columnas (Hero left + Sidegraphics right) */
 @media (min-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr 320px;
     align-items: center;
   }
-}
 
-/* Mobile: una columna (SideGraphics debajo del Hero) */
-@media (max-width: 899px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
+  .hero-section {
+    order: 1;
   }
 
   .sidegraphics {
-    margin-top: 16px;
-    justify-self: center;
-    width: 70%;
-    max-width: 260px;
+    order: 2;
+  }
+}
+
+/* Mobile → una columna (Sidegraphics ARRIBA) */
+@media (max-width: 899px) {
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ORDEN FINAL EN MOBILE */
+  .sidegraphics {
+    order: 1; /* Imagen arriba */
+    width: 95%;
+    max-width: 350px;
+    margin-inline: auto;
+  }
+
+  .hero-section {
+    order: 2; /* Hero abajo */
   }
 }
 
@@ -116,3 +126,4 @@ const projects = [
   padding-block: 60px;
 }
 </style>
+
