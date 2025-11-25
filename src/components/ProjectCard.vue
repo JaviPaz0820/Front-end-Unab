@@ -7,6 +7,7 @@
     <div class="content">
       <h3 class="title">{{ project.title }}</h3>
 
+      <!-- contenedor fijo para descripción (evita que cards cambien de alto) -->
       <p class="desc">{{ project.desc }}</p>
 
       <div class="tech-list">
@@ -37,21 +38,23 @@ defineProps({ project: Object })
   background:var(--card);
   border-radius:12px;
   box-shadow:0 8px 24px rgba(2,6,8,0.6);
-  flex-shrink:0; /* FIX para safari */
 }
 
+/* imagen en contenedor con tamaño fijo */
 .thumb-wrap{
   width:100%;
   height:170px;
   border-radius:10px;
   overflow:hidden;
   background:#081215;
+  display:block;
 }
 
 .thumb{
   width:100%;
   height:100%;
   object-fit:cover;
+  display:block;
   transition:transform .6s cubic-bezier(.2,.9,.2,1);
 }
 .thumb-wrap:hover .thumb{
@@ -65,23 +68,27 @@ defineProps({ project: Object })
   flex:1 1 auto;
 }
 
+/* título */
 .title{
   margin:0;
   font-size:16px;
   line-height:1.2;
 }
 
+/* descripción: limitamos líneas para mantener altura consistente */
 .desc{
   margin:0;
   color:var(--muted);
   font-size:13px;
   line-height:1.4;
   display:-webkit-box;
-  -webkit-line-clamp:4;
+  -webkit-line-clamp:4; /* mostrar máximo 4 líneas */
   -webkit-box-orient:vertical;
   overflow:hidden;
+  text-overflow:ellipsis;
 }
 
+/* tags */
 .tech-list{
   display:flex;
   flex-wrap:wrap;
@@ -97,6 +104,7 @@ defineProps({ project: Object })
   font-size:12px;
 }
 
+/* cta alineado abajo */
 .cta{
   display:flex;
   justify-content:flex-end;
@@ -107,24 +115,10 @@ article{
   transform:translateY(18px);
   transition:all .6s cubic-bezier(.2,.9,.2,1);
 }
+
 article.inview{
   opacity:1;
   transform:translateY(0);
-}
-
-/* ----------------------- */
-/* FIX RESPONSIVE MOBILE   */
-/* ----------------------- */
-
-@media (max-width: 750px){
-
-  .project-card{
-    width: calc(100% - 32px);
-    min-width: calc(100% - 32px);
-    height:auto;
-    margin-inline:16px;
-    scroll-snap-align:center;
-  }
 }
 </style>
 
