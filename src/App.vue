@@ -40,17 +40,11 @@ import Skillset from './components/Skillset.vue'
 import ContactForm from './components/ContactForm.vue'
 import Footer from './components/Footer.vue'
 
-/* Importar imágenes correctamente con Vite */
-const imgTechnoChile = new URL('@/assets/Technochile.jpg', import.meta.url).href
-const imgPokemon = new URL('@/assets/pokemon.jpeg', import.meta.url).href
-const imgRecetas = new URL('@/assets/Recetas.webp', import.meta.url).href
-const imgFeriados = new URL('@/assets/feriados.jpg', import.meta.url).href
-
-/* Tus proyectos */
+/* Importar imágenes correctamente usando exactamente tus nombres y rutas */
 const projects = [
   {
     id: 1,
-    image: imgTechnoChile,
+    image: new URL('/src/assets/Technochile.jpg', import.meta.url).href,
     title: 'Techno Chile',
     desc: 'Demo de una tienda tecnológica desarrollada con Vue 3 y Vite, que presenta un catálogo de productos en un carrusel de tarjetas.',
     tech: ['Vue 3', 'Vite', 'JavaScript', 'CSS', 'Jest', 'Node.js'],
@@ -58,7 +52,7 @@ const projects = [
   },
   {
     id: 2,
-    image: imgPokemon,
+    image: new URL('/src/assets/pokemon.jpeg', import.meta.url).href,
     title: 'Pokeguía',
     desc: 'Aplicación web desarrollada con Vue 3 + Vite que permite explorar y gestionar una guía de Pokémon, integrando autenticación y almacenamiento en la nube mediante Firebase.',
     tech: ['Vue 3', 'Vite', 'Firebase', 'Tailwind CSS'],
@@ -66,7 +60,7 @@ const projects = [
   },
   {
     id: 3,
-    image: imgRecetas,
+    image: new URL('/src/assets/Recetas.webp', import.meta.url).href,
     title: 'Web de Recetas',
     desc: 'La plataforma permite explorar recetas sin recargar la página, gracias al uso de Vue Router y rutas dinámicas.',
     tech: ['Vue 3', 'JavaScript', 'Vite', 'CSS'],
@@ -74,7 +68,7 @@ const projects = [
   },
   {
     id: 4,
-    image: imgFeriados,
+    image: new URL('/src/assets/feriados.jpg', import.meta.url).href,
     title: 'Feriados de Chile',
     desc: 'Web que muestra los feriados oficiales de Chile para el año actual.',
     tech: ['HTML', 'CSS + Bootstrap 5', 'JavaScript', 'jQuery', 'API'],
@@ -82,6 +76,7 @@ const projects = [
   }
 ]
 </script>
+
 
 
 <style>
