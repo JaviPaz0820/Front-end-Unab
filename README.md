@@ -47,6 +47,17 @@ Construir un portafolio rápido, responsivo y funcional que refleje mis habilida
 
 ## DEMO del sitio 
 
+- ¡Explora el portfolio en vivo!
+
+https://portafolijpam.netlify.app 
+
+- El sitio está desplegado en Netlify con las siguientes características:
+
+✅ Despliegue continuo desde GitHub
+✅ HTTPS habilitado
+✅ Optimización automática de assets
+✅ Rendimiento optimizado
+
 --- 
 
 ## 🧠 Funcionalidades principales
