@@ -5,6 +5,7 @@ Este sitio fue diseñado con un enfoque moderno, accesible y altamente visual, i
 --- 
 
 ## 🎯 Objetivo del Proyecto
+
 Construir un portafolio rápido, responsivo y funcional que refleje mis habilidades como Desarrolladora Front-End Junior, integrando:
 - Componentización con Vue 3
 - Renderizado eficiente con Vite
@@ -16,6 +17,7 @@ Construir un portafolio rápido, responsivo y funcional que refleje mis habilida
 --- 
 
 ## 🚀 Tecnologías Utilizadas
+
 - Vue 3 (Composition API)
 - Vite
 - HTML5
@@ -26,22 +28,22 @@ Construir un portafolio rápido, responsivo y funcional que refleje mis habilida
 
 ## Estructura del proyecto 
 
-📦 javiera-portfolio
-├── 📁 src
-│   ├── 📁 assets
-│   ├── 📁 components
-│   │   ├── Header.vue
-│   │   ├── HeroSection.vue
-│   │   ├── SideGraphics.vue
-│   │   ├── Projects.vue
-│   │   ├── Skillset.vue
-│   │   ├── ContactForm.vue
-│   │   └── Footer.vue
-│   ├── App.vue
-│   └── main.js
-├── index.html
-├── package.json
-└── vite.config.js
+- 📦 javiera-portfolio
+- ├── 📁 src
+- │   ├── 📁 assets
+- │   ├── 📁 components
+- │   │   ├── Header.vue
+- │   │   ├── HeroSection.vue
+- │   │   ├── SideGraphics.vue
+- │   │   ├── Projects.vue
+- │   │   ├── Skillset.vue
+- │   │   ├── ContactForm.vue
+- │   │   └── Footer.vue
+- │   ├── App.vue
+- │   └── main.js
+- ├── index.html
+- ├── package.json
+- └── vite.config.js
 
 ---
 
@@ -53,14 +55,15 @@ https://portafolijpam.netlify.app
 
 - El sitio está desplegado en Netlify con las siguientes características:
 
-✅ Despliegue continuo desde GitHub
-✅ HTTPS habilitado
-✅ Optimización automática de assets
-✅ Rendimiento optimizado
+- ✅ Despliegue continuo desde GitHub
+- ✅ HTTPS habilitado
+- ✅ Optimización automática de assets
+- ✅ Rendimiento optimizado
 
 --- 
 
 ## 🧠 Funcionalidades principales
+
 ✅ 1. Hero Section + SideGraphics
 - Presentación profesional
 - Foto integrada en un contenedor visual
@@ -68,21 +71,25 @@ https://portafolijpam.netlify.app
 - Links directos a GitHub y LinkedIn
   
 ✅ 2. Proyectos con Carrusel Horizontal
+
 - Cards responsive y del mismo tamaño
 - Tecnologías utilizadas en cada proyecto
 - Acceso directo al repositorio
 - Imágenes optimizadas
 
 ✅ 3. Skillset en Carrusel (Hard Skills & Soft Skills)
+
 - Cards limpias, con íconos personalizados
 - Descripciones claras de competencias técnicas y personales
 - Totalmente responsive
   
 ✅ 4. Formulario de Contacto
+
 - Validaciones básicas
 - Diseño limpio y profesional
   
 ✅ 5. Footer profesional
+
 - Enlaces a LinkedIn y GitHub
 - Iconografía SVG personalizada
 
@@ -94,10 +101,14 @@ https://portafolijpam.netlify.app
 cd Portafolio-Final
 
 2.Instalar dependencias
-npm install
+" npm install "
 
 3. Levantar entorno de desarrollo
-   npm run dev
+  " npm run dev "
 
 4. Compilar
-   npm run build
+   " npm run build "
+
+## Autor
+
+Javiera Ampuero Millaquipai
